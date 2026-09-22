@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESIMA CONCEPT ENTERPRISE | Build Smart! Live Better!</title>
+    <meta name="description" content="ESIMA CONCEPT ENTERPRISE - Leading biodigester system specialists in Yenagoa, Bayelsa State, Nigeria. Eco-friendly waste management solutions for Nigeria and Africa.">
+    <meta name="keywords" content="biodigester, septic tank, waste management, Yenagoa, Bayelsa, Nigeria, eco-friendly sanitation, ESIMA">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a5f9e;
+            --light-blue: #e8f4fc;
+            --accent-blue: #3b8fd4;
+            --dark-blue: #0d3b66;
+            --white: #ffffff;
+            --text-dark: #1e2a3a;
+            --text-muted: #5a6a7a;
+            --gray-bg: #f7fafc;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dark-blue);
+        }
+        
+        /* Top Bar - inspired by professional construction sites */
+        .top-bar {
+            background: var(--dark-blue);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+        .top-bar a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        .top-bar a:hover { color: #fff; }
+        
+        /* Navbar */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            padding: 0.6rem 0;
+        }
+        .navbar-brand img { height: 52px; width: auto; }
+        .nav-link {
+            color: var(--dark-blue) !important;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 0.5rem 1rem !important;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--accent-blue) !important; }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-blue);
+            border: none;
+            color: white;
+            padding: 0.65rem 1.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(26,95,158,0.3);
+            color: white;
+        }
+        .btn-outline-custom {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 0.55rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            background: transparent;
+            transition: all 0.3s;
+        }
+        .btn-outline-custom:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--light-blue) 0%, #f0f8ff 40%, var(--white) 100%);
+            padding: 110px 0 70px;
+            position: relative;
+        }
+        .hero-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+        .hero-tagline {
+            font-size: 1.35rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 1.8rem;
+        }
+        .bn-badge {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.25rem 0.9rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Section */
+        .section { padding: 75px 0; }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.6rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 55px;
+            height: 4px;
+            background: var(--accent-blue);
+            border-radius: 2px;
+        }
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 1.8rem;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eef2f6;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(26,95,158,0.12);
+        }
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--light-blue);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+        }
+        
+        /* Biodigester */
+        .biodigester-section { background: var(--gray-bg); }
+        .process-step { text-align: center; padding: 1.2rem; }
+        .process-number {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin: 0 auto 0.9rem;
+        }
+        
+        /* Vision */
+        .vm-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        /* Gallery */
+        .gallery-img {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 240px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+        }
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-img:hover img { transform: scale(1.07); }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(13,59,102,0.85));
+            padding: 1rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-img:hover .gallery-overlay { opacity: 1; }
+        
+        /* News Feed */
+        .news-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            height: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eef2f6;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(26,95,158,0.12);
+        }
+        .news-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .news-card:hover .news-img img { transform: scale(1.05); }
+        .news-body { padding: 1.4rem; }
+        .news-date {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .news-title {
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0.7rem;
+            line-height: 1.4;
+        }
+        .news-excerpt {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .news-link {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .news-link:hover { color: var(--dark-blue); }
+        
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: white;
+        }
+        .contact-section h2, .contact-section h3, .contact-section h4, .contact-section h5 { color: white; }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.4rem;
+        }
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a2d4d;
+            color: rgba(255,255,255,0.8);
+            padding: 55px 0 20px;
+        }
+        footer h5 { color: white; margin-bottom: 1.1rem; font-size: 1.05rem; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: white; }
+        .footer-logo { height: 48px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+        .social-links a {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.4rem;
+            transition: background 0.3s;
+        }
+        .social-links a:hover { background: var(--accent-blue); }
+        
+        .policy-list { list-style: none; padding: 0; }
+        .policy-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eef2f6;
+            display: flex;
+            align-items: flex-start;
+        }
+        .policy-list li i { color: var(--primary-blue); margin-right: 0.75rem; margin-top: 0.25rem; }
+        
+        html { scroll-behavior: smooth; }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 1.9rem; }
+            .hero-tagline { font-size: 1.15rem; }
+            .section { padding: 55px 0; }
+            .navbar-brand img { height: 42px; }
+            .top-bar { font-size: 0.78rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <a href="tel:+2348073505153" class="me-3"><i class="fas fa-phone-alt me-1"></i> 0807 350 5153</a>
+                <a href="tel:+2347068369004" class="me-3"><i class="fas fa-phone-alt me-1"></i> 0706 836 9004</a>
+                <a href="mailto:esimaconceptenterptise@gmail.com"><i class="fas fa-envelope me-1"></i> esimaconceptenterptise@gmail.com</a>
+            </div>
+            <div class="d-none d-md-block">
+                <span><i class="fas fa-map-marker-alt me-1"></i> 64 Pere Esimein Street, Azikoro Town, Yenagoa</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="images/536094.png" alt="ESIMA CONCEPT ENTERPRISE Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Biodigester</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision">Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="#contact" class="btn btn-primary-custom">Get a Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="bn-badge">BN: 9798137</span>
+                    <h1 class="hero-title">ESIMA CONCEPT ENTERPRISE</h1>
+                    <p class="hero-tagline">Build Smart! Live Better!</p>
+                    <p class="hero-desc">
+                        Specialists in advanced biodigester systems and sustainable waste management. Delivering eco-friendly sanitation solutions from Yenagoa, Bayelsa State to communities across Nigeria and Africa.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#services" class="btn btn-primary-custom">
+                            <i class="fas fa-recycle me-2"></i>Our Solutions
+                        </a>
+                        <a href="#contact" class="btn btn-outline-custom">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+                    <img src="images/536094.png" alt="ESIMA Logo" class="img-fluid" style="max-height: 260px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Company Profile -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title">Company Profile</h2>
+                    <p class="section-subtitle">Building a cleaner, healthier future through innovative sanitation solutions.</p>
+                    <p>
+                        <strong>ESIMA CONCEPT ENTERPRISE</strong> is a registered Nigerian company (BN: 9798137) headquartered at 64 Pere Esimein Street, Off Sunny Blue, Azikoro Town, Yenagoa, Bayelsa State. We specialize in the design, construction, and installation of modern <strong>biodigester systems</strong> — an advanced, environmentally responsible alternative to traditional septic tanks and soakaways.
+                    </p>
+                    <p>
+                        Founded with a commitment to sustainable development, ESIMA combines local expertise with international best practices in waste treatment technology. Our team of skilled engineers, technicians, and construction professionals deliver high-quality, durable installations that protect groundwater, eliminate odors, and reduce long-term maintenance costs for residential, commercial, and institutional clients.
+                    </p>
+                    <p>
+                        We are passionate about transforming sanitation infrastructure across the Niger Delta and beyond, contributing to healthier communities and a greener Africa.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <h5>Location</h5>
+                                <p class="mb-0 small">64 Pere Esimein Street, Off Sunny Blue, Azikoro Town, Yenagoa, Bayelsa State, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-hard-hat"></i></div>
+                                <h5>Expertise</h5>
+                                <p class="mb-0 small">Biodigester design, construction, installation & retrofit of existing septic systems</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                                <h5>Eco-Friendly</h5>
+                                <p class="mb-0 small">Odorless, zero-waste-evacuation systems that protect the environment</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card">
+                                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                                <h5>Client Focus</h5>
+                                <p class="mb-0 small">Residential, commercial, institutional & industrial projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biodigester Systems -->
+    <section id="services" class="section biodigester-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What is a Biodigester System?</h2>
+                <p class="section-subtitle mx-auto">An advanced, sustainable waste treatment technology designed for modern living.</p>
+            </div>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/148028.jpg" alt="Biodigester Construction" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-3">Understanding Biodigesters</h3>
+                    <p>
+                        A <strong>biodigester system</strong> is a modern, eco-friendly alternative to conventional septic tanks and soakaway pits. It uses naturally occurring anaerobic bacteria and specialized media to break down human waste and organic matter into safe, odorless liquid effluent and minimal residual solids.
+                    </p>
+                    <p>
+                        Unlike traditional septic systems that simply store waste and require frequent costly emptying, biodigesters actively treat and digest waste on-site. The process produces a clear, non-polluting liquid that can safely percolate into the soil, eliminating the need for regular waste removal for decades.
+                    </p>
+                    <p>
+                        At ESIMA CONCEPT ENTERPRISE, we construct robust, reinforced concrete biodigester chambers tailored to the number of users, site conditions, and local regulations — ensuring reliable performance in both dry and waterlogged environments common across Nigeria.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-3 col-6">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h6>Waste Inlet</h6>
+                        <p class="small text-muted">Sewage from toilets and bathrooms flows into the primary chamber via PVC piping.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h6>Anaerobic Digestion</h6>
+                        <p class="small text-muted">Bacteria break down solids in oxygen-free chambers, converting waste into liquid and gases.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h6>Filtration & Settlement</h6>
+                        <p class="small text-muted">Multiple chambers with gravel media further clarify the effluent and trap remaining solids.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h6>Safe Discharge</h6>
+                        <p class="small text-muted">Clean, odorless liquid exits to soakaway trenches or natural percolation — zero pollution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <h5>Key Advantages</h5>
+                        <ul class="small mb-0 ps-3">
+                            <li>Odorless and fly-free operation</li>
+                            <li>No periodic desludging required (20+ years)</li>
+                            <li>Protects groundwater from contamination</li>
+                            <li>Suitable for waterlogged and dry soils</li>
+                            <li>Compact footprint compared to traditional systems</li>
+                            <li>Lower long-term cost of ownership</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                        <h5>Our Construction Process</h5>
+                        <ul class="small mb-0 ps-3">
+                            <li>Site assessment and system sizing</li>
+                            <li>Excavation and foundation preparation</li>
+                            <li>Reinforced concrete chamber construction</li>
+                            <li>Installation of PVC inlet/outlet piping</li>
+                            <li>Gravel media placement and sealing</li>
+                            <li>Inspection covers and final testing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-home"></i></div>
+                        <h5>Applications</h5>
+                        <ul class="small mb-0 ps-3">
+                            <li>Residential homes and estates</li>
+                            <li>Hotels, schools and hospitals</li>
+                            <li>Commercial and office buildings</li>
+                            <li>Churches and community centers</li>
+                            <li>Industrial facilities</li>
+                            <li>Retrofitting existing septic tanks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision, Mission, Policies & Market Goals -->
+    <section id="vision" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Vision, Policies & Ambition</h2>
+                <p class="section-subtitle mx-auto">Guiding principles that drive our commitment to excellence and impact across Nigeria and Africa.</p>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="vm-card">
+                        <h4><i class="fas fa-eye me-2 text-primary"></i>Our Vision</h4>
+                        <p>
+                            To become the foremost provider of innovative, sustainable sanitation solutions in Nigeria and a recognized leader across Africa — empowering communities to build smart and live better through clean, reliable, and environmentally responsible waste management systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vm-card">
+                        <h4><i class="fas fa-bullseye me-2 text-primary"></i>Our Mission</h4>
+                        <p>
+                            To design, construct, and install high-quality biodigester systems that eliminate sanitation challenges, protect public health and the environment, and deliver long-term value to our clients while fostering local expertise and sustainable development in the Niger Delta and beyond.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="vm-card">
+                        <h4><i class="fas fa-globe-africa me-2 text-primary"></i>Market Ambition</h4>
+                        <p>
+                            In Nigeria, we aim to expand from Bayelsa across the South-South and South-East regions, partnering with developers, government agencies, and NGOs. Across Africa, we seek strategic collaborations to introduce cost-effective biodigester technology in markets facing similar sanitation challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3 class="mb-4">Company Policies</h3>
+                    <ul class="policy-list">
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Quality Assurance</strong><br>
+                                <span class="small text-muted">Every project adheres to strict construction standards using durable materials and proven engineering practices to ensure systems last the lifetime of the building.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <strong>Environmental Responsibility</strong><br>
+                                <span class="small text-muted">We prioritize solutions that prevent groundwater pollution, reduce carbon footprint associated with waste transport, and support circular waste management.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-shield"></i>
+                            <div>
+                                <strong>Health & Safety</strong><br>
+                                <span class="small text-muted">Our teams operate under rigorous site safety protocols. Client health is protected through odor-free, hygienic installations that eliminate disease vectors.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <strong>Client Satisfaction</strong><br>
+                                <span class="small text-muted">Transparent communication, timely delivery, and after-sales support form the foundation of our client relationships.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Continuous Improvement</strong><br>
+                                <span class="small text-muted">We invest in training and stay updated with global best practices in biodigester technology to continuously enhance our offerings.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">What We Intend to Achieve</h3>
+                    <div class="feature-card mb-3">
+                        <h5><i class="fas fa-flag me-2 text-primary"></i>In the Nigerian Market</h5>
+                        <p class="small mb-0">
+                            Establish ESIMA as the preferred biodigester contractor in Bayelsa and neighboring states. Partner with real-estate developers, state housing corporations, and local governments to make modern sanitation the standard in new constructions. Create employment opportunities for skilled and semi-skilled workers in the green sanitation sector.
+                        </p>
+                    </div>
+                    <div class="feature-card mb-3">
+                        <h5><i class="fas fa-globe me-2 text-primary"></i>Across Africa</h5>
+                        <p class="small mb-0">
+                            Export our expertise and adaptable biodigester designs to West and Central African countries facing rapid urbanization and inadequate sewage infrastructure. Build strategic alliances with regional partners to localize production and installation, contributing to the African Union’s goals for improved water and sanitation (SDG 6).
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h5><i class="fas fa-seedling me-2 text-primary"></i>Long-Term Impact</h5>
+                        <p class="small mb-0">
+                            Reduce the environmental and public-health burden of poorly managed human waste. Promote a culture of sustainable building practices where “Build Smart! Live Better!” becomes a reality for families, businesses, and communities across the continent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section id="gallery" class="section" style="background: var(--gray-bg);">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Projects in Action</h2>
+                <p class="section-subtitle mx-auto">Real installations by the ESIMA team — quality craftsmanship you can trust.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/148028.jpg" data-caption="Completed biodigester chamber with inspection cover and vent pipe">
+                        <img src="images/148028.jpg" alt="Biodigester installation">
+                        <div class="gallery-overlay"><small>Completed Chamber & Vent</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/405538.jpg" data-caption="Site works and scaffolding at multi-storey building project">
+                        <img src="images/405538.jpg" alt="Construction site">
+                        <div class="gallery-overlay"><small>Active Construction Site</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/396950.jpg" data-caption="Newly cast concrete slab with inspection cover and piping">
+                        <img src="images/396950.jpg" alt="Concrete slab installation">
+                        <div class="gallery-overlay"><small>Slab & Piping Works</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/396773.jpg" data-caption="Finished biodigester cover with outlet connection">
+                        <img src="images/396773.jpg" alt="Finished biodigester">
+                        <div class="gallery-overlay"><small>Finished Cover & Outlet</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/396152.jpg" data-caption="ESIMA team member on site supervising installation">
+                        <img src="images/396152.jpg" alt="Team on site">
+                        <div class="gallery-overlay"><small>Team On Site</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/394027.jpg" data-caption="Scaffolding and building facade during external works">
+                        <img src="images/394027.jpg" alt="Scaffolding works">
+                        <div class="gallery-overlay"><small>External Building Works</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/393754.jpg" data-caption="Technician working inside biodigester chamber with gravel media">
+                        <img src="images/393754.jpg" alt="Internal chamber work">
+                        <div class="gallery-overlay"><small>Internal Chamber Finishing</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/393752.jpg" data-caption="Quality inspection of completed biodigester chambers">
+                        <img src="images/393752.jpg" alt="Quality inspection">
+                        <div class="gallery-overlay"><small>Quality Inspection</small></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="images/396952.jpg" data-caption="Compact biodigester installation in restricted space">
+                        <img src="images/396952.jpg" alt="Compact installation">
+                        <div class="gallery-overlay"><small>Compact Site Installation</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Feed Section -->
+    <section id="news" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">News & Updates</h2>
+                <p class="section-subtitle mx-auto">Stay informed about our latest projects, industry insights, and company developments.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="images/393752.jpg" alt="New Project Completion">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-date"><i class="far fa-calendar-alt me-1"></i> September 2026</div>
+                            <h5 class="news-title">ESIMA Completes Major Residential Biodigester Project in Azikoro</h5>
+                            <p class="news-excerpt">
+                                Our team successfully delivered a multi-chamber biodigester system for a new residential development in Azikoro Town, Yenagoa. The installation features enhanced gravel filtration and is designed for zero maintenance for over 20 years.
+                            </p>
+                            <a href="#contact" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="images/148028.jpg" alt="Biodigester Advantages">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-date"><i class="far fa-calendar-alt me-1"></i> August 2026</div>
+                            <h5 class="news-title">Why Biodigesters Are Replacing Traditional Soakaways in Bayelsa</h5>
+                            <p class="news-excerpt">
+                                With rising environmental concerns and the high cost of frequent desludging, more homeowners and developers in Bayelsa are switching to biodigester systems. We explain the key benefits and long-term savings.
+                            </p>
+                            <a href="#services" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="images/396152.jpg" alt="Team Expansion">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-date"><i class="far fa-calendar-alt me-1"></i> July 2026</div>
+                            <h5 class="news-title">ESIMA Expands Operations to Serve More Communities in the Niger Delta</h5>
+                            <p class="news-excerpt">
+                                As demand for sustainable sanitation grows, ESIMA CONCEPT ENTERPRISE has strengthened its technical team and equipment capacity to take on larger commercial and institutional projects across Bayelsa and neighboring states.
+                            </p>
+                            <a href="#about" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="images/396950.jpg" alt="Quality Standards">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-date"><i class="far fa-calendar-alt me-1"></i> June 2026</div>
+                            <h5 class="news-title">Commitment to Quality: Our Approach to Durable Biodigester Construction</h5>
+                            <p class="news-excerpt">
+                                From reinforced concrete chambers to precision PVC piping and proper media placement, every ESIMA installation follows strict quality protocols to ensure long-lasting performance even in challenging soil conditions.
+                            </p>
+                            <a href="#vision" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="images/405538.jpg" alt="Industry Insight">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-date"><i class="far fa-calendar-alt me-1"></i> May 2026</div>
+                            <h5 class="news-title">Sustainable Sanitation: Aligning with Nigeria’s Environmental Goals</h5>
+                            <p class="news-excerpt">
+                                Modern biodigester technology supports national efforts toward improved water and sanitation (SDG 6). ESIMA is proud to contribute practical, scalable solutions that protect both public health and the environment.
+                            </p>
+                            <a href="#vision" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="images/393754.jpg" alt="Client Focus">
+                        </div>
+                        <div class="news-body">
+                            <div class="news-date"><i class="far fa-calendar-alt me-1"></i> April 2026</div>
+                            <h5 class="news-title">From Site Assessment to Final Handover: The ESIMA Client Experience</h5>
+                            <p class="news-excerpt">
+                                We believe every client deserves clear communication, professional workmanship, and a system that works flawlessly for decades. Learn about our end-to-end project delivery process.
+                            </p>
+                            <a href="#contact" class="news-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    <p class="mb-4 opacity-75">
+                        Ready to upgrade to a modern biodigester system? Contact ESIMA CONCEPT ENTERPRISE today for a free consultation and quotation.
+                    </p>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h6 class="mb-1">Address</h6>
+                            <p class="mb-0 opacity-75 small">64 Pere Esimein Street, Off Sunny Blue,<br>Azikoro Town, Yenagoa, Bayelsa State, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h6 class="mb-1">Telephone</h6>
+                            <p class="mb-0 opacity-75">
+                                <a href="tel:+2348073505153" class="text-white">0807 350 5153</a><br>
+                                <a href="tel:+2347068369004" class="text-white">0706 836 9004</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h6 class="mb-1">Email</h6>
+                            <p class="mb-0 opacity-75">
+                                <a href="mailto:esimaconceptenterptise@gmail.com" class="text-white">esimaconceptenterptise@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon"><i class="fas fa-id-card"></i></div>
+                        <div>
+                            <h6 class="mb-1">Business Number</h6>
+                            <p class="mb-0 opacity-75">BN: 9798137</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="bg-white text-dark p-4 p-md-5 rounded-3 shadow">
+                        <h4 class="mb-4" style="color: var(--dark-blue);">Request a Free Quote</h4>
+                        <form onsubmit="event.preventDefault(); alert('Thank you for your enquiry! We will contact you shortly. Alternatively, please call or email us directly.');">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Full Name" required style="background:#f8fafc; border-color:#e2e8f0; color:#2c3e50; padding: 0.75rem 1rem;">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email Address" required style="background:#f8fafc; border-color:#e2e8f0; color:#2c3e50; padding: 0.75rem 1rem;">
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone Number" required style="background:#f8fafc; border-color:#e2e8f0; color:#2c3e50; padding: 0.75rem 1rem;">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control" style="background:#f8fafc; border-color:#e2e8f0; color:#2c3e50; padding: 0.75rem 1rem;">
+                                    <option value="">Type of Project</option>
+                                    <option>Residential Biodigester</option>
+                                    <option>Commercial / Institutional</option>
+                                    <option>Retrofit Existing System</option>
+                                    <option>Other / Consultation</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Tell us about your project or requirements..." style="background:#f8fafc; border-color:#e2e8f0; color:#2c3e50;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Enquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="images/536094.png" alt="ESIMA Logo" class="footer-logo">
+                    <p class="small">
+                        ESIMA CONCEPT ENTERPRISE — Building smart sanitation solutions for a better life. Proudly serving Yenagoa, Bayelsa State, and expanding across Nigeria and Africa.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#home">Home</a></li>
+                        <li class="mb-2"><a href="#about">About Us</a></li>
+                        <li class="mb-2"><a href="#services">Biodigester Systems</a></li>
+                        <li class="mb-2"><a href="#vision">Vision & Policies</a></li>
+                        <li class="mb-2"><a href="#gallery">Projects</a></li>
+                        <li class="mb-2"><a href="#news">News</a></li>
+                        <li class="mb-2"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Our Services</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">Biodigester Design</li>
+                        <li class="mb-2">Construction & Installation</li>
+                        <li class="mb-2">System Retrofitting</li>
+                        <li class="mb-2">Site Assessment</li>
+                        <li class="mb-2">Maintenance Support</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>0807 350 5153</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>0706 836 9004</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>esimaconceptenterptise@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Yenagoa, Bayelsa State</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6 small">
+                    &copy; 2026 ESIMA CONCEPT ENTERPRISE. All Rights Reserved. BN: 9798137
+                </div>
+                <div class="col-md-6 text-md-end small">
+                    <span class="opacity-75">Build Smart! Live Better!</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="galleryModalLabel">Project Photo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="modalImage" src="" alt="Project" class="img-fluid">
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <p id="modalCaption" class="mb-0 text-muted small"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Gallery modal
+        document.querySelectorAll('.gallery-img').forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.getAttribute('data-img');
+                const caption = this.getAttribute('data-caption');
+                document.getElementById('modalImage').src = imgSrc;
+                document.getElementById('modalCaption').textContent = caption;
+                document.getElementById('galleryModalLabel').textContent = caption;
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
