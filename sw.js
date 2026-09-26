@@ -1,4 +1,4 @@
-const CACHE_NAME = 'esima-concept-v1';
+const CACHE_NAME = 'esima-concept-v2';
 const CORE_ASSETS = [
   './',
   './index.html',
